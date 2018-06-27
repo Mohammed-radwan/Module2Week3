@@ -46,6 +46,7 @@
     <h3 id="object"></h3>
     <h1 id="vehicle"></h1>
     <h1 id="if-statement"></h1>
+    <h1 id="advertisement"></h1>
 
  
 <script>
@@ -91,6 +92,19 @@ function vehicleType(color,type,age)
       document.getElementById('vehicle').innerHTML="a "+color+" new "+vehicle[type];
       else 
       document.getElementById('vehicle').innerHTML="a "+color+" used "+vehicle[type];
+      
+      var advResult='Amazing Joe\'s Garage, we service ';
+      console.log(vehicle.length);
+      //Write an advertisement
+      for(var index=0;index<vehicle.length;index++)
+        if(index==vehicle.length-1)
+          advResult+=vehicle[index]+ '.';
+        else if (index==vehicle.length-2)
+          advResult+=vehicle[index]+" and ";  
+        else
+          advResult+=vehicle[index]+'\, ';
+      document.getElementById('advertisement').innerHTML=advResult;
+
 }
 //call the function
 vehicleType("Red",3,0);
