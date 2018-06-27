@@ -44,6 +44,8 @@
     </div>
     <h1 id="colorResult"></h1>
     <h3 id="object"></h3>
+    <h1 id="vihcle"></h1>
+    <h1 id="if-statement"></h1>
 
  
 <script>
@@ -78,5 +80,17 @@ function logObject(someObject){
     document.getElementById('object').innerHTML=result;
   }
 }
+
+//Create a function named vehicleType
+function vehicleType(color,type){
+  if(type==1)
+  document.getElementById('vihcle').innerHTML="a "+color+" Car";
+  else
+  document.getElementById('vihcle').innerHTML="a "+color+" motorbike";
+}
+vehicleType("Red",0);
+document.getElementById('if-statement').innerHTML=(3==="3")?"Yes":"No";
+
+console.log((3===3)?"Yes":"No");
 </script>
  </body>
