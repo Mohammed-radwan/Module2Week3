@@ -44,7 +44,7 @@
     </div>
     <h1 id="colorResult"></h1>
     <h3 id="object"></h3>
-    <h1 id="vihcle"></h1>
+    <h1 id="vehicle"></h1>
     <h1 id="if-statement"></h1>
 
  
@@ -80,26 +80,21 @@ function logObject(someObject){
     document.getElementById('object').innerHTML=result;
   }
 }
-
-//Create vehicleType function
-function vehicleType(color,type,age){
-  if(type==1){
-    if(age==0)
-  document.getElementById('vihcle').innerHTML="a "+color+" new Car";
-  else
-  document.getElementById('vihcle').innerHTML="a "+color+" used Car";
-  }
-  else{
-  if(age==0)
-  document.getElementById('vihcle').innerHTML="a "+color+" new motorbike";
-  else
-  document.getElementById('vihcle').innerHTML="a "+color+" used motorbike";
-  }
-}
-vehicleType("Red",1,0);
 //Write If statement
 document.getElementById('if-statement').innerHTML=(3==="3")?"Yes":"No";
 console.log((3===3)?"Yes":"No");
+//Add a list of vehicles 
+function vehicleType(color,type,age)
+{
+  var vehicle =['car','motobike','wagon','bike'];
+      if(age==0)
+      document.getElementById('vehicle').innerHTML="a "+color+" new "+vehicle[type];
+      else 
+      document.getElementById('vehicle').innerHTML="a "+color+" used "+vehicle[type];
+}
+//call the function
+vehicleType("Red",3,0);
+
 
 </script>
  </body>
