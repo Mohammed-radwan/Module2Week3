@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HYF calculator homework</title>
+  <link 
+    rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+
+<style>
+  p, h1 {
+    text-align: center;
+    font-size: 30px;
+  }
+  p{
+    color: red;
+    
+  }
+  h1{
+      color: green;
+  }
+</style>
+
+<body>
+    <p id="str1-result1"></p>
+    <p id="str2-result2"></p>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+    <h1 id="result3"></h1>
+    <h1 id="result4"></h1>
+    <h1 id="result5.1"></h1>
+    <h1 id="result5"></h1>
+
+<script>
+
+    //String
+     var myString = "Hello,this,is,a,difficult,to,read,sentence";
+    var strAfter="";
+    for(let i=0;i<myString.length;i++){
+        if(myString[i]==',')
+            strAfter+=" ";
+        else strAfter+=myString[i]
+    }
+    document.getElementById("str1-result1").innerHTML=strAfter;
+
+    // Solution2 usingg replace()
+    var myString = "hello,this,is,a,difficult,to,read,sentence";
+    myString=myString.replace(/,/g," ");
+    document.getElementById("str2-result2").innerHTML=myString;/*
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+    
+
+    //Array
+    let favoriteAnimals = ['blowfish', 'capricorn', 'giraffe'];
+    //add item to the end of the array
+    favoriteAnimals[favoriteAnimals.length]="turtle";
+    //add item using push()
+    favoriteAnimals.push("turtle");
+    document.getElementById("result1").innerHTML=favoriteAnimals;
+    //add item at any position in the array
+    favoriteAnimals.splice(1,0,"meerkat");
+    document.getElementById("result2").innerHTML=favoriteAnimals;
+    //log the length of the array
+    document.getElementById("result3").innerHTML="The array has a length of " +favoriteAnimals.length;
+    //delete item in array when we know the index of the item
+    favoriteAnimals.splice(3,1);
+    document.getElementById("result4").innerHTML=favoriteAnimals;
+    //delete item by its value
+    for(let i=0;i<favoriteAnimals.length;i++){
+    if(favoriteAnimals[i]=="meerkat"){
+        favoriteAnimals.splice(i,1);
+        document.getElementById("result5.1").innerHTML="The index of 'meerkat' is \t"+ i; 
+        }
+    }
+    document.getElementById("result5").innerHTML=favoriteAnimals;
+</script>
+ </body>
