@@ -81,16 +81,25 @@ function logObject(someObject){
   }
 }
 
-//Create a function named vehicleType
-function vehicleType(color,type){
-  if(type==1)
-  document.getElementById('vihcle').innerHTML="a "+color+" Car";
+//Create vehicleType function
+function vehicleType(color,type,age){
+  if(type==1){
+    if(age==0)
+  document.getElementById('vihcle').innerHTML="a "+color+" new Car";
   else
-  document.getElementById('vihcle').innerHTML="a "+color+" motorbike";
+  document.getElementById('vihcle').innerHTML="a "+color+" used Car";
+  }
+  else{
+  if(age==0)
+  document.getElementById('vihcle').innerHTML="a "+color+" new motorbike";
+  else
+  document.getElementById('vihcle').innerHTML="a "+color+" used motorbike";
+  }
 }
-vehicleType("Red",0);
+vehicleType("Red",1,0);
+//Write If statement
 document.getElementById('if-statement').innerHTML=(3==="3")?"Yes":"No";
-
 console.log((3===3)?"Yes":"No");
+
 </script>
  </body>
