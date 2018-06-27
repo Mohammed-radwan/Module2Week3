@@ -95,6 +95,8 @@ function vehicleType(color,type,age)
       
       var advResult='Amazing Joe\'s Garage, we service ';
       console.log(vehicle.length);
+      //Add a new item and i don't need to change the code
+      vehicle.push("caravan");
       //Write an advertisement
       for(var index=0;index<vehicle.length;index++)
         if(index==vehicle.length-1)
@@ -103,6 +105,7 @@ function vehicleType(color,type,age)
           advResult+=vehicle[index]+" and ";  
         else
           advResult+=vehicle[index]+'\, ';
+
       document.getElementById('advertisement').innerHTML=advResult;
 
 }
