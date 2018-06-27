@@ -8,11 +8,22 @@
 </head>
 
 <style>
+  body{
+    box-sizing: border-box;
+  }
   h1{
     padding: 10px;
     border: green solid 5px;
     text-align: center;
     color: green;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 20px;
+  }
+  h3{
+    padding: 10px;
+    border: green solid 5px;
+    color: rgb(52, 106, 177);
     width: 50%;
     margin: 10px auto;
   }
@@ -31,8 +42,8 @@
       <input type="text"  placeholder="Enter the color" id="color" >
       <button onclick="carColor()" style="float: right;">Car's Color</button>
     </div>
-  
-      <h1 id="colorResult"></h1>
+    <h1 id="colorResult"></h1>
+    <h3 id="object"></h3>
 
  
 <script>
@@ -48,6 +59,24 @@ document.getElementById("result").innerHTML=addNumbers(2,3,4);
 function carColor(){
   color1=document.getElementById('color').value;
   document.getElementById("colorResult").innerHTML=color1+" Car";
+}
+
+
+//Object
+//Define an object
+var someObject1= {
+name:'Mohammed',
+age:36,
+married:true,
+Children:'Yes'};
+logObject(someObject1);
+// create a function to print the object's properties and values
+function logObject(someObject){
+  var result='';
+  for(var i in someObject){
+    result+="someObject"+"."+ i +"="+someObject[i]+'<br>';
+    document.getElementById('object').innerHTML=result;
+  }
 }
 </script>
  </body>
