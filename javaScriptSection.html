@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HYF calculator homework</title>
-  <link 
-    rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <title>HYF calculator homework</title> 
 </head>
 
 <style>
@@ -22,17 +19,35 @@
   p{
     color: red;
   }
+  .car-color{
+    display: flex;
+  }
+
 </style>
-<a href=""></a>
 
 <body>
-        <h1 id="result"></h1>
+    <h1 id="result"></h1>
+    <div style="margin: auto; width: 50%;">
+      <input type="text"  placeholder="Enter the color" id="color" >
+      <button onclick="carColor()" style="float: right;">Car's Color</button>
+    </div>
+  
+      <h1 id="colorResult"></h1>
+
+ 
 <script>
-//Function
+//Functions
+//Add 3 numbers function
 function addNumbers(x,y,z){
     var result=x+y+z;
     return result;
 }
 document.getElementById("result").innerHTML=addNumbers(2,3,4);
+
+// Return the car's color function
+function carColor(){
+  color1=document.getElementById('color').value;
+  document.getElementById("colorResult").innerHTML=color1+" Car";
+}
 </script>
  </body>
