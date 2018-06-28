@@ -123,7 +123,7 @@ document.getElementById('objectTeachers').innerHTML="Module1 Teachers: "+hyfObje
 hyfObject.languages="Html, Css, JavaScript";
 document.getElementById('objectLanguages').innerHTML="Languages: "+hyfObject.languages;
 
-
+//Check the quality of the arrays
 let x=[1,2,3];
 let y=[1,2,3];
 let z=x;
@@ -134,5 +134,15 @@ console.log((x===z)?'Equal':'Not Equal'); //Equal
 console.log('x= '+x);
 console.log('y= '+y);
 console.log('z= '+z);
+
+//Compare Objects
+let o1 = { foo: 'bar' };
+let o2 = { foo: 'bar' };
+let o3 = o2;
+console.log((o1==o2)?'Equal':'Not Equal');
+console.log((o3===o2)?'Equal':'Not Equal');
+  
+  let bar = 42;
+  console.log(typeof typeof bar); //type of 42 is number and type of 'Number' is String  
 </script>
  </body>
