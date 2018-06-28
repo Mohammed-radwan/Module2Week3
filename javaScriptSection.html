@@ -47,6 +47,8 @@
     <h1 id="vehicle"></h1>
     <h1 id="if-statement"></h1>
     <h1 id="advertisement"></h1>
+    <h1 id="objectTeachers"></h1>
+    <h1 id="objectLanguages"></h1>
 
  
 <script>
@@ -112,6 +114,14 @@ function vehicleType(color,type,age)
 //call the function
 vehicleType("Red",3,0);
 
+//create object
+var hyfObject={};
+//add properties and values to the object
+hyfObject={teachersModule1:"Nick, Miet, Tiago",teachersModule2:"Claudio, Rob"};
+document.getElementById('objectTeachers').innerHTML="Module1 Teachers: "+hyfObject.teachersModule1+'<br>'+"Module2 Teachers: "+hyfObject.teachersModule2;
+//add new property to the object;
+hyfObject.languages="Html, Css, JavaScript";
+document.getElementById('objectLanguages').innerHTML="Languages: "+hyfObject.languages;
 
 </script>
  </body>
